@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -52,21 +45,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('struct_define_huffman_table.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,6 +59,7 @@ $(document).ready(function(){initNavTree('struct_define_huffman_table.html','');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
@@ -109,6 +88,8 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Une structure struct DefineHuffmanCode (DHT) permet de stocker les informations lues dans une section DHT. Il faut donc en définir plusieurs pour stocker les différentes sections DHT. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00160">160</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a8439fc020e968d1a0ff1b54f5e76721b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8439fc020e968d1a0ff1b54f5e76721b">&sect;&nbsp;</a></span>codes</h2>
@@ -122,6 +103,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>tableau de structures de struct <a class="el" href="struct_huffman_code.html" title="Une structure struct HuffmanCode (HCODE) permet de stocker les informations relatives à un code...">HuffmanCode</a> alloué au moment de la lecture de DHT avec countSymbols. Il faut penser à remplir les champs de chaque code : la connaissance du nombre de symboles par longueur de code et la lecture des valeurs/symboles qui suivent permettent de remplir les 2 champs de chaque code. La fonction buildHuffmanCodes remplit le champ code16. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00165">165</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -138,6 +121,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>nombre total de symboles (doit être inferieur à 256) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00164">164</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="a7441ef0865bcb3db9b8064dd7375c1ea"></a>
@@ -152,6 +137,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>identifiant de la table de codage d'Huffman (à associer avec idDC ou idAC selon le type) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00161">161</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -168,6 +155,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>tableau contenant le nombre de codes par longueur de bits (indice 0 du tableau = longueur 1 bit) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00163">163</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="a45c83f994d2147c9f22c744de0a923dd"></a>
@@ -182,6 +171,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>pointeur sur la structure DHT suivante (liste chainee, car on ne connait pas par avance le nombre de sections DHT. L'insertion de chaque DHT se fait en tete pour simplifier l'opération. Il faudra mettre à jour le champ tetelistedht de la structure JPEGDATA à chaque insertion. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00170">170</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -198,21 +189,19 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>type de valeurs sur lequel cette table s'applique (0 DC, 1 AC) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00162">162</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
+<li>Jpeg-master/<a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="struct_define_huffman_table.html">DefineHuffmanTable</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

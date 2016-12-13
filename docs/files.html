@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,20 +46,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('files.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -87,24 +66,22 @@ $(document).ready(function(){initNavTree('files.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all documented files with brief descriptions:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="common__jpeg_8h_source.html"><span class="icondoc"></span></a><b>common_jpeg.h</b></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="error_8h_source.html"><span class="icondoc"></span></a><b>error.h</b></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="file__io_8h_source.html"><span class="icondoc"></span></a><b>file_io.h</b></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="jpeg__8x8__block_8h_source.html"><span class="icondoc"></span></a><b>jpeg_8x8_block.h</b></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="jpeg__data__stream_8h_source.html"><span class="icondoc"></span></a><b>jpeg_data_stream.h</b></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="jpeg__header__parser_8h_source.html"><span class="icondoc"></span></a><b>jpeg_header_parser.h</b></td><td class="desc"></td></tr>
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_b7e38da97e3287dcde30e7324e1b84c8.html" target="_self">Jpeg-master</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="common__jpeg_8h_source.html"><span class="icondoc"></span></a><a class="el" href="common__jpeg_8h.html" target="_self">common_jpeg.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="error_8h_source.html"><span class="icondoc"></span></a><a class="el" href="error_8h.html" target="_self">error.h</a></td><td class="desc">Contitent la définition des différents codes d'erreurs </td></tr>
+<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="file__io_8h_source.html"><span class="icondoc"></span></a><a class="el" href="file__io_8h.html" target="_self">file_io.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="jpeg__8x8__block_8h_source.html"><span class="icondoc"></span></a><a class="el" href="jpeg__8x8__block_8h.html" target="_self">jpeg_8x8_block.h</a></td><td class="desc">On introduit ici les fonctions pour les blocks 8x8. cf page 8 </td></tr>
+<tr id="row_0_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="jpeg__data__stream_8h_source.html"><span class="icondoc"></span></a><a class="el" href="jpeg__data__stream_8h.html" target="_self">jpeg_data_stream.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="jpeg__header__parser_8h_source.html"><span class="icondoc"></span></a><a class="el" href="jpeg__header__parser_8h.html" target="_self">jpeg_header_parser.h</a></td><td class="desc">Contient l'ensemble de fonctions/structure pour le parsage des header JPEG </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

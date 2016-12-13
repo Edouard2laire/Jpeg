@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -52,21 +45,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('struct_component.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,6 +59,7 @@ $(document).ready(function(){initNavTree('struct_component.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
@@ -111,6 +90,8 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>La structure struct <a class="el" href="struct_component.html" title="La structure struct Component (COMPONENT) permet de stocker les informations relatives à une composan...">Component</a> (COMPONENT) permet de stocker les informations relatives à une composante (Y, Cb ou Cr). Dans le cas où il y a 3 composantes, il y aura 3 structures. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00096">96</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a106f0e8e7f5b802202124dfd8fc134fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a106f0e8e7f5b802202124dfd8fc134fd">&sect;&nbsp;</a></span>horizontal_sample_factor</h2>
@@ -124,6 +105,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>facteur de sous-echantillonnage de la composante (1 pour Y, 1 ou 2 pour Cb/Cr) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00101">101</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -140,6 +123,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>identifiant de la composante (généralement 1 pour Y, 2 pour Cb, 3 pour Cr) (à lire dans SOF) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00097">97</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="ab7a56da2a560360651b215bafcd04fa7"></a>
@@ -154,6 +139,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>identifiant pour la table de codage Huffman pour la valeur AC (à lire dans SOS) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00099">99</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -170,6 +157,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>identifiant pour la table de codage Huffman pour la valeur DC (à lire dans SOS) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00098">98</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="a4ba7966d3f62786e0ece41f32feea17e"></a>
@@ -184,6 +173,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>identifiant de la table de quantification pour cette composante (à lire dans SOF) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00103">103</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -200,6 +191,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>initialiser à 0 pendant la lecture de SOF </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00100">100</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="aa88894c096b6bc2292cd3c254fb61978"></a>
@@ -215,21 +208,19 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>facteur de sous-echantillonnage de la composante (1 pour Y, 1 ou 2 pour Cb/Cr) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00102">102</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
+<li>Jpeg-master/<a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="struct_component.html">Component</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

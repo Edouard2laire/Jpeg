@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -52,21 +45,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('struct_start_of_frame.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,6 +59,7 @@ $(document).ready(function(){initNavTree('struct_start_of_frame.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
@@ -115,6 +94,8 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>La structure struct <a class="el" href="struct_start_of_frame.html" title="La structure struct StartOfFrame (SOF) permet de stocker les informations lues dans la section SOF...">StartOfFrame</a> (SOF) permet de stocker les informations lues dans la section SOF. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00110">110</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="ab94b15db08c3601ae92a4e1e40396647"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab94b15db08c3601ae92a4e1e40396647">&sect;&nbsp;</a></span>components</h2>
@@ -128,6 +109,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>tableau des composantes, à allouer dynamiquement pendant la lecture de SOF et la détermination de nbComponents. Une fois allouée(s), il faut penser à remplir les champs de chaque composante. </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00123">123</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -144,6 +127,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>hauteur de l'image multiple de la hauteur d'une MCU supérieure ou égale à height (format 444 : HAUTEURmcu = 8, format 422 H : HAUTEURmcu = 8, format 422 V : HAUTEURmcu = 16, format 420 : HAUTEURmcu = 16) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00114">114</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="ab73b93bbf9ac5fe1a519ad36907d0d54"></a>
@@ -158,6 +143,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>largeur de l'image multiple de la largeur d'une MCU supérieure ou égale à width (format 444 : LARGEURmcu = 8, format 422 H : LARGEURmcu = 16, format 422 V : LARGEURmcu = 8, format 420 : LARGEURmcu = 16) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00117">117</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -174,6 +161,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>hauteur de l'image </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00112">112</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="a042f009ee475df985b9f9432118920cf"></a>
@@ -188,6 +177,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>facteur de sous-échantillonnage horizontal (à calculer pendant la lecture de SOF) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00121">121</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -204,6 +195,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>nombre de composantes (1 ou 3) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00122">122</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="aa95455ed52a8459fad69509a4a0411b5"></a>
@@ -218,6 +211,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>precision en bits par composante (8 ou 16 bits) </p>
+
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00111">111</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
 
 </div>
 </div>
@@ -234,6 +229,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>facteur de sous-échantillonnage vertical (à calculer pendant la lecture de SOF) </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00120">120</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <a id="a2474a5474cbff19523a51eb1de01cda4"></a>
@@ -249,21 +246,19 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>largeur de l'image </p>
 
+<p>Definition at line <a class="el" href="jpeg__header__parser_8h_source.html#l00113">113</a> of file <a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
+<li>Jpeg-master/<a class="el" href="jpeg__header__parser_8h_source.html">jpeg_header_parser.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="struct_start_of_frame.html">StartOfFrame</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JPEG: Jpeg-master/error.h Source File</title>
+<title>JPEG: Jpeg-master/jpeg_data_stream.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,11 +65,34 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">error.h</div>  </div>
+<div class="title">jpeg_data_stream.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="error_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ERROR_H_</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ERROR_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="error_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">   14</a></span>&#160;<span class="preprocessor">#define DEBUG 0</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define ERROR_MEMORY_ALLOCATION -1</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define ERROR_START_SECTION -2</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define ERROR_START_OF_FRAME_NOT_FOUND -3</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define ERROR_DHT -4</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define ERROR_SOI -5</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define ERROR_FILE_FORMAT -6</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define ERROR_DECODING -7</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//A completer selon vos erreurs...</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ERROR_H_ */</span><span class="preprocessor"></span></div></div><!-- fragment --></div><!-- contents -->
+
+<p><a href="jpeg__data__stream_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1741997eb99b04534eddb8260d92819c"><td class="memItemLeft" align="right" valign="top"><a id="a1741997eb99b04534eddb8260d92819c"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>retrieveRawdata</b> (unsigned char *, int, int, int *)</td></tr>
+<tr class="separator:a1741997eb99b04534eddb8260d92819c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac365c0903ca2947a58a3102fd99737d4"><td class="memItemLeft" align="right" valign="top"><a id="ac365c0903ca2947a58a3102fd99737d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>upSampler</b> (<a class="el" href="structjpeg_data.html">pJPEGDATA</a>, int *, unsigned char *)</td></tr>
+<tr class="separator:ac365c0903ca2947a58a3102fd99737d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7332ce4ee4f0e5789a7cf9faf3c4b1b"><td class="memItemLeft" align="right" valign="top"><a id="ad7332ce4ee4f0e5789a7cf9faf3c4b1b"></a>
+unsigned char **&#160;</td><td class="memItemRight" valign="bottom"><b>decodeMCU</b> (<a class="el" href="structjpeg_data.html">pJPEGDATA</a>, int *, int *)</td></tr>
+<tr class="separator:ad7332ce4ee4f0e5789a7cf9faf3c4b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9fde85c6a8715ded24490cce2eb61c4"><td class="memItemLeft" align="right" valign="top"><a id="ae9fde85c6a8715ded24490cce2eb61c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>copyMCUtoImage</b> (<a class="el" href="structjpeg_data.html">pJPEGDATA</a>, unsigned char **, int, int)</td></tr>
+<tr class="separator:ae9fde85c6a8715ded24490cce2eb61c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece579ba03aa61bad929e3aca66ee915"><td class="memItemLeft" align="right" valign="top"><a id="aece579ba03aa61bad929e3aca66ee915"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>processRawdata</b> (<a class="el" href="structjpeg_data.html">pJPEGDATA</a>)</td></tr>
+<tr class="separator:aece579ba03aa61bad929e3aca66ee915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
