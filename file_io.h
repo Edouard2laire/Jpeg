@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DEBUG 1
 
 /**
  * \struct PPM file_io.h
@@ -13,7 +12,7 @@
  **/
 struct PPM{
 	// PPM header
-	char magic[2];	/*!< 2 bytes - 'P' '3' */
+	char magic[2];	/*!< 2 bytes - JPEG = 0xFFD8 ; BMP= 0x424D ; PPM= "P3" .*/
 	int width;      /*!< 4 bytes : the image width */
 	int height;		/*!< 4 bytes : the image height */
 	int max;		/*!< 4 bytes : max value (less than 65536 and more than zero).*/

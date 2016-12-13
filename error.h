@@ -1,7 +1,17 @@
 #ifndef ERROR_H_
 #define ERROR_H_
 
-#define DEBUG 0 //A utiliser avec if(DEBUG) pour des phases de tests, notamment avec des printf
+/**
+ * \file error.h
+ * \brief Contitent la définition des différents codes d'erreurs.
+ */
+
+
+/**
+ * \define DEBUG
+ * \brief 1 si Débug en cours, 0 sinon
+ */
+#define DEBUG 0
 
 #define ERROR_MEMORY_ALLOCATION -1
 #define ERROR_START_SECTION -2

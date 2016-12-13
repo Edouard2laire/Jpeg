@@ -2,8 +2,26 @@
 #define JPEG_HEADER_PARSER_H_
 
 #include "common_jpeg.h"
-
-#define MARKER_SOF 0xC0 //baseline DCT (Huffman)
+/**
+ * \file Jpeg_header_parser
+ * \brief Contient l'ensemble de fonctions/structure pour le parsage des header JPEG
+ * \see "common_jepeg.h"
+ */
+/**
+ * \define MARKER_SOF
+ * \brief Start Of Frame :Identifie le début d'une section pour l'encodage d'Huffman : baseline  0xFF 0xC0
+ *  Offset dans la section | Taille en octet | Description
+ *  --------------------------------------------------------
+ *  0x00 | 2 | Marqueur SOF pour identifier la section(0xFFC0 )
+ *  0x02 | 2 | Taille de la section sans le marqueur, mais les 2 octets de taille sont compris
+ *  0x04 | 1 | Précision en bits par composante
+ *  0x05 | 2 | Hauteur en pixels de l’image
+ *  0x07 | 2 | Largeur en pixels de l’image
+ *  0x09 | 1 | Nombre de composantes N(3 pour YCbCR, 1 pour une image en niveau de gris )
+ *  0x0A | 3N| Information pour chaque composante 1 octet : indice de composante ; b7,b6,b5,b4 facteur d’échant. horizontal; b3,b2,b1,b0 facteur d'échant vetical; 1 octet : table de quantification associé
+ *
+ */
+#define MARKER_SOF 0xC0
 #define MARKER_DHT 0xC4
 #define MARKER_SOS 0xDA
 #define MARKER_DQT 0xDB
@@ -123,7 +141,14 @@ typedef struct HuffmanCode* pHCODE;
 typedef struct DefineHuffmanTable DHT;
 typedef struct DefineHuffmanTable* pDHT;
 
+/**
+ * \brief Teste si le nombre magique du fichier est bon (Pour JPEG : 0xFFD8 )
+ * \see JPEG_MAGIC
+ * \return 1 si le fichier est valide, 0 sinon.
+ */
 int isFileJPEGFormat(unsigned char*);
+
+
 int shortToInt(unsigned char*);
 int parsingHeader(unsigned char*, pJPEGDATA);
 int parsingSOF(unsigned char*,pJPEGDATA);
