@@ -1,6 +1,10 @@
 #ifndef COMMON_JPEG_H_
 #define COMMON_JPEG_H_
 
+/**
+ * \file common_jpeg.h
+ */
+ 
 #define BLOCK_SIZE_H 8
 #define BLOCK_SIZE_W 8
 

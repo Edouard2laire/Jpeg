@@ -1,6 +1,12 @@
 #ifndef JPEG_8x8_BLOCK_H_
 #define JPEG_8x8_BLOCK_H_
 
+/**
+ * \file jpeg_8x8_block.h
+   \brief On introduit ici les fonctions pour les blocks 8x8.  cf page 8.
+    
+ */
+ 
 #include "common_jpeg.h"
 
 static int ZigZagArray[64] =
@@ -15,9 +21,25 @@ static int ZigZagArray[64] =
     35,  36, 48,  49,  57,  58,  62,  63,
 };
 
+/**
+* \brief convertie une liste de 64 elem en un tableau 8x8
+* \param tableau source, tableau dest
+*/
 void array1Dto2D( int[64], int[8][8]);
+/**
+* \brief convertie un tableau 8x8 en une liste de 64 elem
+* \param tableau source, tableau dest
+*/
 void array2Dto1D( int[8][8], int[64]);
+
+/**
+* \brief Applique la quantification inverse en multipliant les blocs terme à terme. 
+* F(u,v)*Q(u,v)= DCT(u,v) Attantion : la table de quantification sont au format zigZag.
+* \param le bloc 8×8 (1D) et la table de quantification associée 8x8(1D) 
+* \see array1Dto2D 
+*/
 void iQuantize( int[64], int[64]);
+
 void deZigZag( int[64], int[64]);
 float coeffC( int);
 void iDCT8( int*);

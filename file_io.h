@@ -1,6 +1,10 @@
 #ifndef FILE_IO_H_
 #define FILE_IO_H_
 
+/**
+ * \file file_io.h
+ */
+ 
 #include <stdio.h>
 #include <stdlib.h>
 
