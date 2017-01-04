@@ -12,7 +12,7 @@
 #include "jpeg_data_stream.h"
 #include "jpeg_header_parser.h"
 
-
+int  Monb[3][3]= { }
 void RGBintoYCbCr (JPEGDATA img){
 	int i; int j; int k;
 	int R; int G; int B;
