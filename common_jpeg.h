@@ -6,8 +6,6 @@
 
 #define Taille_IMG 64
 
-#define intoYCbCr {{0.257,-0.148,0.439},{0.504,-0.291,-0.368},{0.098,0.439,-0.071}}
-#define intoRGB {{1,1,1},{0,-0.34414,1.772},{1.402,-0.71414,0}}
 
 typedef struct jpegData {
 	int image[Taille_IMG][Taille_IMG][3];
