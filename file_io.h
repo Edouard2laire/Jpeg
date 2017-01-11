@@ -8,6 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define Nblettres 100
+
+typedef int TabINT[TAILLE];
+
 
 /**
  * \struct PPM file_io.h
@@ -22,4 +26,5 @@ struct PPM{
 	int max;		/*!< 4 bytes : max value (less than 65536 and more than zero).*/
 };
 
+void imagewritePPM(char fileName[NbLettres+1], int height, int width, TabINT* red, TabINT* blue, TabINT* green);
 #endif /* FILE_IO_H_ */
