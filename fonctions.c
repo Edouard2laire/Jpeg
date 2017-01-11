@@ -1,33 +1,41 @@
 /*
  * fonctions.c
  *
- *  Created on: 14 déc. 2016
+ *  Created on: 22 déc. 2016
  *      Author: ensea
  */
-
+#include <stdlib.h>
+#include <stdio.h>
 #include "common_jpeg.h"
-#include "error.h"
-#include "file_io.h"
-#include "jpeg_8x8_block.h"
-#include "jpeg_data_stream.h"
-#include "jpeg_header_parser.h"
 
 
-void RGBintoYCbCr (pJPEGDATA img){
-
-}
-
-void imagewritePPM(char fileName[NbLettres+1], int height, int width, TabINT* red, TabINT* green, TabINT* blue) {
-	FILE* imagePPM = fopen(fileName,"w");
-	if (imagePPM!=NULL) {
-		fprintf(imagePPM,"P3 \n %d %d \n 255\n",width,height);
-		int i=0;
-		for (i=0;i<height*width<;i++) {
-			int j=0;
-			for (j=0;j<width;j++) {
-				fprintf(imagePPM,"%d\n %d\n %d\n",*red[i],*green[i],*blue[i]);
+unsigned char fileRead(char nomDuFichier[NBLETTERS+1],int* p){
+	FILE* fichier = NULL;
+	int carac =0;
+	int k =0;
+	int nombre = 0;
+	int* taboctet = NULL;
+	if(fopen(nomDuFichier, "r")!= NULL){
+		fichier = fopen(nomDuFichier, "r");
+		taboctet = malloc(p * sizeof(int));
+		while(carac!=EOF){
+			for(k=1;k<=8;k++){
+				carac = fgetc(fichier);
+				nombre = nombre + carac*2^(8-k);
+			}
+			p=p+1;
+			taboctet = realloc(taboctet, p * sizeof(int));
+			if(taboctet){
+				taboctet[p-1]=nombre;
+			}
+			else{
+				exit(0);
 			}
 		}
-		fclose(imagePPM);
 	}
+	else{
+		fclose(fichier);
+		printf("Le fichier est vide");
+	}
+	return (&taboctet);
 }

@@ -1,12 +1,16 @@
-#ifndef COMMON_JPEG_H_
-#define COMMON_JPEG_H_
+/*
+ * fonctions.h
+ *
+ *  Created on: 22 déc. 2016
+ *      Author: ensea
+ */
 
-#define BLOCK_SIZE_H 8
-#define BLOCK_SIZE_W 8
+#ifndef FONCTIONS_H_
+#define FONCTIONS_H_
+#define NBLETTERS 20
 
-#define Taille_IMG 64
 
-typedef struct jpegData JPEGDATA;
-typedef struct jpegData* pJPEGDATA;
+unsigned char fileRead(char[NBLETTERS+1],int*);
 
-#endif /* COMMON_JPEG_H_ */
+
+#endif /* FONCTIONS_H_ */
