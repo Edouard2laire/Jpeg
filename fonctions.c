@@ -104,3 +104,18 @@ int shortToInt(int LSB, int MSB){
 	return taille;
 
 }
+
+void imagewritePPM(char fileName[NbLettres+1], int height, int width, TabINT* red, TabINT* green, TabINT* blue) {
+	FILE* imagePPM = fopen(fileName,"w");
+	if (imagePPM!=NULL) {
+		fprintf(imagePPM,"P3 \n %d %d \n 255\n",width,height);
+		int i=0;
+		for (i=0;i<height*width<;i++) {
+			if (i*height==0) {
+				fprintf(imagePPM,"\n");
+			}
+			fprintf(imagePPM,"%d %d %d ",*red[i],*green[i],*blue[i]);
+		}
+		fclose(imagePPM);
+	}
+}
