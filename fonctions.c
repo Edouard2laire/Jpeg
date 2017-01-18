@@ -37,5 +37,5 @@ unsigned char fileRead(char nomDuFichier[NBLETTERS+1],int* p){
 		fclose(fichier);
 		printf("Le fichier est vide");
 	}
-	return (&taboctet);
+	return (&(taboctet[0]));
 }
