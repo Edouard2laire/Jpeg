@@ -139,7 +139,7 @@ int parsingHeader(unsigned char* taboctet, pJPEGDATA jpegData) {
 				SOS=1;
 				fin=1;
 			}
-			i+=*(taboctet+i+1);
+			i+=shortToInt(...);
 		}
 		if (SOS*SOF*DHT*DQT==1) {
 			return 1;
