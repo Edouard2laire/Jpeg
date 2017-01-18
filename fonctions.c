@@ -119,3 +119,31 @@ void imagewritePPM(char fileName[NbLettres+1], int height, int width, TabINT* re
 		fclose(imagePPM);
 	}
 }
+
+int parsingHeader(unsigned char* taboctet, pJPEGDATA jpegData) {
+	int jpegFormat = isFileJPEGFormat(jpegData);
+	if (jpegFormat==1) {
+		int fin=0,i=0,SOS=0,SOF,DHT,DQT;
+		while (fin==0) {
+			switch (*(taboctet+i)) {
+			case MARKER_SOF :
+				SOF=1;
+				break;
+			case MARKER_DHT :
+				DHT=1;
+				break;
+			case MARKER_DQT :
+				DQT=1;
+				break;
+			case MARKER_SOS :
+				SOS=1;
+				fin=1;
+			}
+			i+=*(taboctet+i+1);
+		}
+		if (SOS*SOF*DHT*DQT==1) {
+			return 1;
+		}
+	}
+	return 0;
+}
